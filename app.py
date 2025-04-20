@@ -23,7 +23,6 @@ if upload_file is not None:
 
     # Prediction
     preds = model.predict(x)
-    st.write(f"Predictions (raw): {preds}")  # Check the raw output
 
     try:
         top_preds = decode_predictions(preds, top=3)[0]
