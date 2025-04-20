@@ -26,7 +26,6 @@ if upload_file is not None:
 
     try:
         top_preds = decode_predictions(preds, top=3)[0]
-        st.write(f"Decoded predictions: {top_preds}")  # Check decoded predictions
 
         for i, pred in enumerate(top_preds):
             st.write(f"{i+1}. **{pred[1]}** — {round(pred[2]*100, 2)}%")
